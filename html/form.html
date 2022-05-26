@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style1.css">
+        <script src="../OLP/jquery.min.js"></script>
+        <script src="../OLP/jquery.validate.min.js"></script>
+        <script src="../OLP/additional-methods.js"></script>
+        <script src="../OLP/Validation.js"></script>
+    </head>
+
+    <body>
+
+        <div class="form1">
+<!--Coustmer Details-->
+        <div class="heading">Cousmer Details:</div>
+        <br><hr><br>
+
+<!--form-->
+        <form name="myform" id="myform" method="post" action="">
+
+<!--Full name-->
+        <div class="name">Full Name <span style="color:red;">*</span>
+                <table class="table1">
+                    <tr>
+                        <td><input type="text" id="fname" name="fname"></td>
+                        <td><input type="text" id="lname" name="lname"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="label1" for="fname">First Name</label><br>
+                        </td>
+
+                        <td><label class="label1" for="lname">Last Name</label><br>
+                        </td> 
+                    </tr>       
+                </table>
+        </div>
+
+<!--address--><br><br>
+        <div class="address">Address<span style="color:red;">*</span>
+                <table class="table2">
+                    <!--street address--><br>
+                        <input type="text" id="street1" name="streetaddress1"><br>
+                        <label class="label1" for="street">Street Address</label><br>
+                    
+                    <!--street address line 2-->
+                        <input type="text" id="street2" name="streetaddress2"><br>
+                        <label class="label1" for="street">Street Address Line 2</label><br>
+                    
+                    <!--city and state-->
+                    <tr>
+                        <td><input type="text" id="city" name="city"></td>
+                        <td><input type="text" id="state" name="state"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="label1" for="city">City</label><br>
+                            <span id="CITY" class="span1"></span></td>
+                        <td><label class="label1" for="state">State / Province</label><br>
+                    </tr>                
+                </table>
+
+<!--Postal / Zip code--><br>
+                        <input type="text" id="postal" name="postal"><br>
+                        <label class="label1" for="postal">Postal / Zip Code</label><br>
+
+<!--phone number--><br><br>                    
+            <div class="phone">Phone Number <span style="color:red;">*</span>
+                <table class="table3">
+                    <tr>
+                        <td><input type="text" id="phone" name="phone" placeholder="(000) 000-0000"
+                            onblur="return validateform8()"  onchange="return validateform8()"><br>
+                    </tr>    
+                </table>
+            </div>
+        
+<!--E-mail--><br><br>                    
+            <div class="email">E-mail</div>
+            <table class="table3">
+                <tr>
+                    <td><input class="t1" type="email" id="e_mail" name="e_mail" placeholder="ex: email@yahoo.com"></td>
+                </tr> 
+                <tr>
+                    <td><label for="email">example@example.com</label><br>
+                </tr>   
+            </table>
+        </div>
+
+<!--How did you here about us?--><br><br>                    
+            <div class="name">How did you hear about us? <span style="color:red;">*</span><br>
+                    <select class="t1" name="how" id="how">
+                        <option value="0">Please select</option>
+                        <option value="Newspaper">Newspaper</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Magazine">Magazine</option>
+                        <option value="(Please specify..)">other (Please specify..)</option>
+                    </select>
+            </div>
+
+<!--feedback about us--><br><br>                    
+            <div class="name">Feedback about us:<br>
+                <textarea class="t1" id="feedback" name="feedback"></textarea>
+            </div>
+
+<!--suggestion about us--><br><br>                    
+            <div class="name">Suggestion if any for further improvements:<br>
+                <textarea class="t1" id="suggetion" name="suggetion"></textarea>
+            </div>
+
+<!--Will you be willing recommend us?--><br><br>                    
+                <label class="name" for="recommend">Will you be willing recommend us? </label>
+                <input type="checkbox" id="recommend" name="recommend"><br>
+
+<!--gender--><br><br>                    
+            <div class="radio-container">
+                <p  class="name">Gender : 
+                <input type="radio" class="male1" id="male" name="male" value="Male">
+                <label class="name" for="male">Male</label>
+                <input type="radio" class="male1" id="female" name="male" value="Female">
+                <label class="name" for="female">Female</label>
+                <input type="radio"  class="male1" id="other" name="male" value="Other">
+                <label class="name"  for="other">Other</label></p>
+            </div>
+
+<!--Please give refrence of any two people whom you feel:--><br><br>                    
+            <div class="plase">
+                <p  class="name">Please give refrence of any two people whom you feel:</p>
+                <table class="table4">
+                    <tr>
+                        <th class="tr3"></th>
+                        <th class="tr1">Full Name</th>
+                        <th class="tr1">Address</th>
+                        <th class="tr1">Contact Number</th>
+                    </tr>
+                    <tr>
+                        <td class="tr1">1</td>
+                        <td class="tr2"></td>
+                        <td class="tr2"></td>
+                        <td class="tr2"></td>
+                    </tr>
+                    <tr>
+                        <td class="tr1">2</td>
+                        <td class="tr2"></td>
+                        <td class="tr2"></td>
+                        <td class="tr2"></td>
+                    </tr>
+                </table>
+            </div>
+            <br><br><hr>
+            
+<!--submit--><br><br>                    
+            <button class="button" type="submit" value="submit" id="submit">Submit</button>
+
+        </form></div><br>
+        <div class="t">
+            <table  class="table_all" id="myTable">
+              <thead>
+                <tr class="w3-blue">
+                <th nowrap>Sl.No</th>      
+                <th nowrap>First Name</th>      
+                <th nowrap>Last name</th>
+                <th nowrap>Street 1</th>
+                <th nowrap>Street 2</th>
+                <th nowrap>City</th>      
+                <th nowrap>State</th>      
+                <th nowrap>Zip code</th>
+                <th nowrap>Phone no</th>
+                <th nowrap>E-mail</th>
+                <th nowrap>About us select</th>      
+                <th nowrap>Feedback</th>      
+                <th nowrap>Suggestions</th>
+                <th nowrap>Recommend</th>
+                <th nowrap>Gender</th>
+                </tr>
+                </thead>
+                <tbody >
+                </tbody>
+            </table></div>      
+    </body>
+</html>
